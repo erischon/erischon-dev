@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid yellowgreen;
+}
+
+.main-container {
+    flex: 1 0 auto;
+}
+
+.footer {
+    background: indigo;
+    color: white;
+    /* align-self: stretch; */
+}
+
+
