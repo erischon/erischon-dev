@@ -5,3 +5,8 @@ omit=
     manage.py
     */config/*
     */tests/*
+
+[report]
+fail_under = 98
+show_missing = True
+skip_covered = False
