@@ -30,6 +30,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 3rd
     "tinymce",
+    "rest_framework",
+    "corsheaders",
+    "django_extensions",
     # Local
     "blog",
 ]
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -123,7 +127,15 @@ STATICFILES_DIRS = STATIC_DIR
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "mediafiles"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ]
+}
+
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+    "http://localhost:8000",
+)
