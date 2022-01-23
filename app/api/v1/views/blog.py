@@ -5,13 +5,11 @@ from api.v1.serializers.blog import PostSerializer
 from blog.models import Post
 
 
-class PostList(generics.ListCreateAPIView):
+class PostList(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    http_method_names = ['get']
 
 
-class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+class PostDetail(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    http_method_names = ['get']
