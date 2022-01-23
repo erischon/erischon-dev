@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "tinymce",
 	'rest_framework',
     'corsheaders',
+    'django_extensions',
     # Local
     "blog",
 ]
