@@ -1,4 +1,3 @@
-
 from rest_framework import generics
 
 from api.v1.serializers.blog import PostSerializer

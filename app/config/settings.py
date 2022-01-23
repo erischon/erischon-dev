@@ -30,9 +30,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 3rd
     "tinymce",
-	'rest_framework',
-    'corsheaders',
-    'django_extensions',
+    "rest_framework",
+    "corsheaders",
+    "django_extensions",
     # Local
     "blog",
 ]
@@ -130,12 +130,12 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
     ]
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8000',
+    "http://localhost:3000",
+    "http://localhost:8000",
 )
