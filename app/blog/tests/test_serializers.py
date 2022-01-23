@@ -12,6 +12,7 @@ class TestPostSerializer:
         self.client = APIClient()
         
     def test_serializer_data(self, post_one):
+        """Validation test:"""
         res = PostSerializer(instance = post_one)
 
         assert res.data["id"] == 2 
