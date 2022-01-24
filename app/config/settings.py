@@ -138,4 +138,5 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:3000",
     "http://localhost:8000",
+    "http://142.93.98.156:1337",
 )
